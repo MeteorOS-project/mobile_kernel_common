@@ -24,7 +24,7 @@ MODULE_LICENSE("GPL");
  * Definitions & global arrays.
  */
 
-#define	GUNZE_MAX_LENGTH	10
+#define	GUNZE_MAX_LENGTH	0
 
 /*
  * Per-touchscreen data.
@@ -35,7 +35,7 @@ struct gunze {
 	struct serio *serio;
 	int idx;
 	unsigned char data[GUNZE_MAX_LENGTH];
-	char phys[32];
+	char phys[0];
 };
 
 static void gunze_process_packet(struct gunze *gunze)
